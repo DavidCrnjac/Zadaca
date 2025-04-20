@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="David Crnjac">
+    <meta name="description" content="Web sjedište trgovine odjeće - Prototip projekta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trgovina Odjeće</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .entity {
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: red;
+            font-weight: bold;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 100px); /* Subtracting header and footer */
+        }
+
+        nav {
+            background-color: black;
+            padding: 10px;
+            color: white;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            color: black;
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            nav {
+                width: 200px;
+            }
+
+            main {
+                flex: 1;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="entity">Odjel Muške Mode</div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <strong>Navigacija</strong>
+            <a href="">Vježba 1</a>
+            <a href="">Vježba 2</a>
+            <a href="">Vježba 3</a>
+            <a href="">Zadaća 3</a>
+        </nav>
+
+        <main>
+            <h2>Dobrodošli u našu trgovinu odjeće</h2>
+
+            <section>
+                <h3>O trgovini</h3>
+                <p>Naša trgovina nudi kvalitetnu mušku i žensku odjeću po pristupačnim cijenama. Pronađite moderne stilove za svaku priliku!</p>
+            </section>
+
+
+            <section>
+                <h3>Tablica Proizvoda</h3>
+                <table>
+                    <tr>
+                        <th>Proizvod</th>
+                        <th>Cijena</th>
+                        <th>Kategorija</th>
+                    </tr>
+                    <tr>
+                        <td>Muška jakna</td>
+                        <td>250 KM</td>
+                        <td>Muška odjeća</td>
+                    </tr>
+                    <tr>
+                        <td>Ženska haljina</td>
+                        <td>320 KM</td>
+                        <td>Ženska odjeća</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <a href="https://www.fsre.sum.ba">FSRE</a>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="mailto:david.crnjac3@fsre.sum.ba" style="color:white;">David Crnjac</a></p>
+    </footer>
+</body>
+</html>
