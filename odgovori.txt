@@ -1,0 +1,100 @@
+a)	Pokreće li vaš preglednik HTTP verziju 1.0 ili 1.1? 
+Preglednik pokreće HTTP/1.1.
+To sam zaključio iz statusnog koda koji je 304 Not Modified, 
+ovaj statusni kod nije podržan u HTTP/1.0, već je uveden u HTTP/1.1.
+
+b)	Koja je verzija HTTP-a poslužitelja pokrenuta kad pristupite npr sa sum.ba?
+Koristi HTTP2 i to se može vidjeti u zaglavlju zahtjeva kada se omogući prikaz kolone Protocol 
+unutar Network taba u pregledniku (Google Chromeu u mom slučaju). Tu je označeno da se koristi h2, što označava HTTP/2.
+
+c)	Koje jezike (ako postoje) vaš preglednik pokazuje da može prihvatiti na poslužitelju?
+
+Pokazuje da može prihvatiti engleski i hrvatski po idućoj liniji u Network tabu 
+accept-language: hr-HR,hr;q=0.9,en-US;q=0.8,en;q=0.7
+
+d)	Koja je IP adresa vašeg računala? A koja je IP adresa sum.ba?
+IP adresa mog računala je 92.240.34.235, a sum.ba 212.39.111.33 
+
+e)	Kada je HTML datoteka koju dohvaćate zadnji put modificirana na poslužitelju?
+HTML datoteka koju dohvaćam je zadnji put modificirana na poslužitelju 
+last-modified: Thu, 03 Dec 1992 08:37:20 GMT
+
+f)	Koliko se bajtova sadržaja vraća u vaš preglednik?
+Vraća se 37218 bajtova i to vidim po liniji content-length: 37218
+
+g)	Koji softver/web poslužitelj  poslužje web stranicu na server,navedite odakle vidite?
+
+Web stranica http://info.cern.ch koristi Apache kao softver na web poslužitelju i to vidim preko server: Apache
+u sekciji Response Headers
+
+h)	Koje jezike vaš web preglednik može prihvatiti?
+Pokazuje da može prihvatiti engleski i hrvatski po idućoj liniji u Network tabu 
+accept-language: hr-HR,hr;q=0.9,en-US;q=0.8,en;q=0.7
+
+-------drugi zadatak-----------
+Pristupite sljedećim resursima te za svaki resurs napišite HTTP odgovor koji dobijete (bez tijela), te za svaki resurs odgovorite:
+
+a)	kojem MIME formatu resursa se radi:
+b)	kolika je veličina resursa (u byte-ima)
+c)	koja je verzija HTTP poslužitelja
+
+
+Resursi su:
+1)	http://web-admin.sum.ba/api/storage/pravilnik_mobilnost_1552858671_80.pdf
+2)	https://eucenje.sum.ba/moodle/pluginfile.php/1/core_admin/logocompact/300x300/1698654623/Logo%20sumarum.png
+3)	https://mirrors.edge.kernel.org/linuxmint/stable/10/sha256sum.txt
+
+
+
+
+
+
+1) http://web-admin.sum.ba/api/storage/pravilnik_mobilnost_1552858671_80.pdf
+
+HTTP/1.1 200 OK
+Date: Tue, 22 Apr 2025 18:04:35 GMT
+Server: nginx/1.18.0 (Ubuntu)
+Content-Type: application/pdf
+Content-Length: 176588
+Last-Modified: Mon, 18 Mar 2019 10:57:45 GMT
+Connection: keep-alive
+ETag: "5c8f8a49-2b20c"
+Accept-Ranges: bytes
+a) MIME format: application/pdf
+b) Veličina: 176588 bajtova
+c) HTTP poslužitelj: nginx/1.18.0 (Ubuntu)
+
+2) https://eucenje.sum.ba/moodle/pluginfile.php/1/core_admin/logocompact/300x300/1698654623/Logo%20sumarum.png
+
+HTTP/2 200
+Date: Tue, 22 Apr 2025 18:04:35 GMT
+Server: Apache
+Content-Type: image/png
+Content-Length: 15255
+Last-Modified: Fri, 17 Nov 2023 10:30:58 GMT
+ETag: "3b97-60b2dfd77dd1a"
+Accept-Ranges: bytes
+a) MIME format: image/png
+b) Veličina: 15255 bajtova
+c) HTTP poslužitelj: Apache
+
+3) https://mirrors.edge.kernel.org/linuxmint/stable/10/sha256sum.txt
+
+
+HTTP/1.1 200 OK
+Date: Tue, 22 Apr 2025 18:04:36 GMT
+Server: Apache/2.4.57 (Unix)
+Content-Type: text/plain
+Content-Length: 1892
+Last-Modified: Thu, 18 Aug 2011 13:08:45 GMT
+ETag: "764-4aa1cc7a524c0"
+Accept-Ranges: bytes
+a) MIME format: text/plain
+b) Veličina: 1892 bajta
+c) HTTP poslužitelj: Apache/2.4.57 (Unix)
+
+
+
+
+
+
